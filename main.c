@@ -23,7 +23,7 @@ static void repl()
 
 
 int main () {
-
+    interpreter_init();
     repl();
     return 0;
 }
