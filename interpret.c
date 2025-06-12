@@ -41,16 +41,16 @@ void interpret (const char *source) {
         int arg1 = stack_pop(s);
         int arg2 = stack_pop(s);
         stack_push(s, arg1*arg2);
-    }else if (strcmp (op, "print")== 0){
-        int arg1 = stack_pop(s);
-        int arg2 = stack_pop(s);
-        stack_push(s, arg1*arg2);
-    }else if (strcmp (op, "pop")== 0){
-        int arg1 = stack_pop(s);
-        int arg2 = stack_pop(s);
-        stack_push(s, arg1*arg2);
     }
+    else if (strcmp(op, "print") == 0) {
+    int value = stack_pop(s);      
+    printf("%d\n", value);         
 
+    } else if (strcmp(op, "exit") == 0) {
+     printf("Exit...\n"); 
+     exit(0);
+    }
+    
 
 
     stack_print(s);
