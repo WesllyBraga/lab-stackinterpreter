@@ -1,13 +1,14 @@
-#ifndef list_h
-#define list_h
+#ifndef LISTA_H
+#define LISTA_H
 
 typedef struct list List;
-
+// Cria uma nova lista vazia
 List* new_list();
-void list_append (List* s, char* key, int value);
-int list_get (List* s, char* key);
-void list_set (List* s, char* key, int value);
-int list_exist (List* s, char* key);
-void list_print (List* s);
+// Adiciona ou atualiza uma variável na lista
+void set_variable(List* l, const char* key, int value);
+// Busca o valor de uma variável; retorna 1 se achou, 0 caso contrário
+int get_variable(List* l, const char* key, int* out_value);
+// Imprime todas as variáveis (para debug)
+void list_print(List* l);
 
 #endif
