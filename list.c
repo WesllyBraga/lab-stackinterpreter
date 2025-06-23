@@ -4,7 +4,7 @@
 #include "list.h"
 
 struct node {
-    char key[a15];
+    char key[15];
     int value;
     struct node* next;
 };
